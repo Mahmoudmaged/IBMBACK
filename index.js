@@ -1,16 +1,18 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const port = process.env.PORT ||3000
+const port = process.env.PORT || 3000
 app.use(express.json())
 const axios = require('axios')
 const cors = require('cors')
 app.use(cors())
 const nltKey = 'Basic YXBpa2V5Ol93MkpfVG5menZDZ3J4THhndmhjT2tjZHZYc2hWU3NaLUpsMm9nU3BXRW9q';
 const nltUrl = 'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/8e9e1888-02df-45b9-b2c6-6f9ea5d41a3f/v3/translate?version=2018-05-01'
-
-app.post("/hello" ,  (req,res)=>{
-  res.json({message:"Done" , data:req.body})
+app.get('/', (req, res) => {
+  res.json({ message: "welcome IBM  DEBI project by Mahmoud Elwan" })
+})
+app.post("/hello", (req, res) => {
+  res.json({ message: "Done", data: req.body })
 })
 app.post('/nlt', async (req, res) => {
   try {
