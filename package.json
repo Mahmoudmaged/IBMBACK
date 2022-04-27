@@ -2,12 +2,12 @@
   "name": "ibmproject",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js"
   },
   "engines": {
-    "node":"16.14.0"
+    "node":"14"
   },
   "keywords": [],
   "author": "",
